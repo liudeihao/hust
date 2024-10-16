@@ -1,0 +1,22 @@
+digraph Tree { size=7; ratio=0.6
+node [shape=box, style="filled, rounded", color="black", fontname="helvetica"] ;
+graph [ranksep=equally, splines=polyline] ;
+edge [fontname="helvetica"] ;
+0 [label=<Coupler_System &le; 0.5<br/>squared_error = 0.48<br/>samples = 404710<br/>value = 10.1>, fillcolor="#eead7f"] ;
+1 [label=<YearMade &le; 1991.5<br/>squared_error = 0.42<br/>samples = 360847<br/>value = 10.21>, fillcolor="#eca36f"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+3 [label=<squared_error = 0.37<br/>samples = 155724<br/>value = 9.97>, fillcolor="#f1ba92"] ;
+1 -> 3 ;
+4 [label=<fiProductClassDesc &le; 13.5<br/>squared_error = 0.37<br/>samples = 205123<br/>value = 10.4>, fillcolor="#e99355"] ;
+1 -> 4 ;
+5 [label=<squared_error = 0.21<br/>samples = 79749<br/>value = 10.09>, fillcolor="#eeae80"] ;
+4 -> 5 ;
+6 [label=<squared_error = 0.38<br/>samples = 125374<br/>value = 10.59>, fillcolor="#e58139"] ;
+4 -> 6 ;
+2 [label=<squared_error = 0.12<br/>samples = 43863<br/>value = 9.21>, fillcolor="#ffffff"] ;
+0 -> 2 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+{rank=same ; 0} ;
+{rank=same ; 1} ;
+{rank=same ; 4} ;
+{rank=same ; 3; 5; 6; 2} ;
+}
